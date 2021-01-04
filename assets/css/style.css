@@ -750,7 +750,6 @@ h2 {
 
 p {
   font-size: 16px;
-  color: #909090;
   line-height: 30px;
   letter-spacing: 0.4px;
 }
@@ -2145,7 +2144,6 @@ footer {
 }
 
 .blog-details ul li {
-  color: #909090;
   margin-bottom: 10px;
 }
 
@@ -2162,6 +2160,26 @@ footer {
 
 .blog-detail.bg-blog-1 {
   background: url("../img/blog-detail/1.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.blog-detail.bg-blog-2 {
+  background: url("../img/blog-detail/2.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.blog-detail.bg-blog-3 {
+  background: url("../img/blog-detail/3.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.blog-detail.bg-blog-4 {
+  background: url("../img/blog-detail/4.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.blog-detail.bg-blog-5 {
+  background: url("../img/blog-detail/5.jpg") center center no-repeat;
   background-size: cover;
 }
 /*# sourceMappingURL=style.css.map */

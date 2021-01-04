@@ -1,163 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>LOGIN</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Halvor - Detail Work</title>
-    <link rel="stylesheet" href="assets/css/plugin.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome/css/all.css">
-</head>
+    
 
-<body>
-    <!-- Start Preload -->
-    <div class="preloader">
+    <!-- Bootstrap core CSS -->
+<link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/5.0/examples/sign-in/signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    
+<main class="form-signin">
+  <form>
+    <img style="height: 50px;" src="assets/img/logo.png" alt=""><p>
+    <label for="inputEmail" class="visually-hidden">Username</label>
+    <input type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+    <label for="inputPassword" class="visually-hidden">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
     </div>
-    <div class="block-1"></div>
-    <div class="block-2"></div>
-    <div class="logo-load">
-        <img style="height: 50px;" src="assets/img/logo.png" alt="">
-    </div>
-    <div class="logo-load spinning"></div>
-    <div class="over-all"></div>
-    <!-- End Preload -->
-
-    <!-- Start Navbar -->
-    <nav>
-        <div class="container">
-            <div class="navbars">
-
-                <!-- logo -->
-                <div class="logo">
-                    <a class="load-halvor" href="index.html">
-                        <img style="height: 50px;" src="assets/img/logo.png" alt="">
-                    </a>
-
-                </div>
-
-                <!-- navbar link -->
-                <ul class="links">
-                    <li class="normal-link active"><a class="load-halvor" data-link='HOME'
-                        href="index.html">HOME</a></li>
-                        <li class="normal-link"><a class="load-halvor" data-link='WISATA REKREASI' href="wisatarekreasi.html">WISATA REKREASI</a></li>
-                        <li class="normal-link"><a class="load-halvor" data-link='WISATA KULINER' href="wisatakuliner.html">WISATA KULINER</a></li>
-                        <li class="normal-link"><a class="load-halvor" data-link='REGISTER' href="register.html">REGISTER</a>
-                        </li>
-
-                        <li>
-                            <div class="button_su">
-                                <span class="su_button_circle">
-                                </span>
-                                <a  href="login.html" class="button_su_inner load-halvor">
-                                    <span class="button_text_container">
-                                        LOGIN
-                                    </span>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <!-- mobile menu -->
-                    <div class="toggle">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
-                    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
+  </form>
+</main>
 
 
-                </div>
-            </div>
-        </nav>
-        <!-- End Navbar -->
-
-        <!-- Start Content -->
-        <div id="halvor">
-
-            <!-- Start Header -->
-            <section class="header-detail-work luxy-el" data-horizontal="1" data-speed-y="10">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <!-- head-title -->
-                            <div class="head-text">
-                             <form>
-                                USERNAME / EMAIL :
-                               <input type="text" name=""><br>
-                               PASSWORD :
-                               <input type="text" name="">
-                           </form>                    
-                       </div>
-                   </div>
-               </div>
-
-               <!-- main background-->
-               <div class="work-detail bg-work-1"></div>
-           </div>
-       </section>
-       <!-- End Header -->
-
-       <!-- Start Footer -->
-       <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 offset-md-1 text-center">
-                    <div class="to-touch">
-
-                        <h2>EXPLORE OUR WORKS</h2>
-                        <p>Creative team to your disposal</p>
-                        <div class="button_su mt-10">
-                            <span class="su_button_circle">
-                            </span>
-                            <a href="#" class="button_su_inner">
-                                <span class="button_text_container">
-                                    NEXT PROJECT
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-12 text-center mt-40">
-                    <div class="nav-footer">
-                        <ul>
-                            <li><a href="#">HOME</a></li>
-                            <li><a href="#">WORK</a></li>
-                            <li><a href="#">ABOUT</a></li>
-                            <li><a href="#">SERVICES</a></li>
-                            <li><a href="#">BLOG</a></li>
-                            <li><a href="#">CONTACT</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-6 text-center text-md-right mt-30">
-                    <div class="copy">
-                        <p>Made with ♥ by Esensifiksi.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 text-center text-md-left mt-30">
-                    <div class="social-footer">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-behance" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End Footer -->
-</div>
-<!-- End Content -->
-
-<script src="assets/js/plugin.js"></script>
-<script src="assets/js/main.js"></script>
-</body>
-
+    
+  </body>
 </html>
