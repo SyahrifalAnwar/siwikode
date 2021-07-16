@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- BEGIN: VENDOR CSS-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>app-assets/vendors/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>app-assets/vendors/flag-icon/css/flag-icon.min.css">
     <!-- END: VENDOR CSS-->
     <!-- BEGIN: Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>app-assets/css/themes/vertical-modern-menu-template/materialize.css">

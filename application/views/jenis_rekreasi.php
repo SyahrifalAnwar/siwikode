@@ -1,4 +1,4 @@
- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
 
 
  <div class="row">
@@ -8,7 +8,7 @@
     <div class="container">
       <div class="row">
         <div class="col s10 m6 l6">
-          <h5 class="breadcrumbs-title mt-0 mb-0"><span>Data Testimoni</span></h5>
+          <h5 class="breadcrumbs-title mt-0 mb-0"><span>Jenis Rekreasi</span></h5>
        
         </div>
 
@@ -18,7 +18,8 @@
 <div class="col s12">
   <div class="container">
     <div class="section section-data-tables">
-
+<a id="tambah" href="<?php echo base_url('master_data/tambah_jenis_rekreasi') ?>" class="btn btn-success">Tambah Data</a>
+        
       <!-- DataTables example -->
       <div class="row">
         <div class="col s12 m12 l12">
@@ -34,9 +35,11 @@
                   <table id="DataKuliner" class="display dataTable dtr-inline collapsed" role="grid" style="width: 100%;">
                     <thead>
                       <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" style="width: 260px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">NO</th>
-                        <th class="sorting" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" style="width: 391px;" aria-label="Position: activate to sort column ascending">Nama </th>
-                        <th class="sorting" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" style="width: 208px;" aria-label="Office: activate to sort column ascending">Komentar</th><th class="sorting" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" style="width: 157px;" aria-label="Age: activate to sort column ascending">Bintang</th>
-                        <th class="sorting" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" style="width: 179px;" aria-label="Start date: activate to sort column ascending">Action</th>
+                        <th class="sorting" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" style="width: 391px;" aria-label="Position: activate to sort column ascending">Nama Rekreasi </th>
+                      
+                        <th></th>
+                         <th></th>
+                          <th></th>
                        
                        </tr>
                     </thead>
@@ -94,7 +97,7 @@
       "iDisplayLength": 10,
       "aLengthMenu": [[10, 20, 50, 100, 150], [10, 20, 50, 100, 150]],
       "ajax":{
-        url :"<?php echo site_url('Master_data/json_testimoni/')?>",
+        url :"<?php echo site_url('Master_data/json_jenis_wisata/')?>",
         type: "POST",
         error: function(){
           $(".my-grid-error").html("");

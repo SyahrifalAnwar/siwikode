@@ -113,6 +113,88 @@ class M_data extends CI_Model {
 
 	}
 
+	public function json_jenis_wisata($like_value = NULL, $column_order = NULL, $column_dir = NULL, $limit_start = NULL, $limit_length = NULL)
+	{
+		$sql = "
+		SELECT
+		(@row:=@row+1) AS nomor,`id`, `nama`
+		
+		FROM
+		`jenis_wisata` AS a
+		
+		, (SELECT @row := 0) r 
+		WHERE 1=1
+		";
+
+		$data['totalData'] = $this->db->query($sql)->num_rows();
+
+		if( ! empty($like_value))
+		{
+			$sql .= " AND ( ";
+			$sql .= "
+			a.`nama` LIKE '%".$this->db->escape_like_str($like_value)."%'
+			";
+			$sql .= " ) ";
+		}
+
+		$data['totalFiltered']	= $this->db->query($sql)->num_rows();
+
+		$columns_order_by = array(
+			0   => 'nomor',
+			1   => 'a.`nama`'
+			
+		);
+
+		$sql .= " ORDER BY ".$columns_order_by[$column_order]." ".$column_dir.", nomor ";
+		$sql .= " LIMIT ".$limit_start." ,".$limit_length." ";
+
+		$data['query'] = $this->db->query($sql);
+		return $data;
+		
+		
+	}
+
+	public function json_jenis_kuliner($like_value = NULL, $column_order = NULL, $column_dir = NULL, $limit_start = NULL, $limit_length = NULL)
+	{
+		$sql = "
+		SELECT
+		(@row:=@row+1) AS nomor,`id`, `nama`
+		
+		FROM
+		`jenis_kuliner` AS a
+		
+		, (SELECT @row := 0) r 
+		WHERE 1=1
+		";
+
+		$data['totalData'] = $this->db->query($sql)->num_rows();
+
+		if( ! empty($like_value))
+		{
+			$sql .= " AND ( ";
+			$sql .= "
+			a.`nama` LIKE '%".$this->db->escape_like_str($like_value)."%'
+			";
+			$sql .= " ) ";
+		}
+
+		$data['totalFiltered']	= $this->db->query($sql)->num_rows();
+
+		$columns_order_by = array(
+			0   => 'nomor',
+			1   => 'a.`nama`'
+			
+		);
+
+		$sql .= " ORDER BY ".$columns_order_by[$column_order]." ".$column_dir.", nomor ";
+		$sql .= " LIMIT ".$limit_start." ,".$limit_length." ";
+
+		$data['query'] = $this->db->query($sql);
+		return $data;
+		
+		
+	}
+
 	public function json_kuliner($like_value = NULL, $column_order = NULL, $column_dir = NULL, $limit_start = NULL, $limit_length = NULL)
 	{
 		$sql = "
@@ -145,6 +227,88 @@ class M_data extends CI_Model {
 			1   => 'a.`nama`',
 			2   => 'b.`alamat`',
 			3   => 'a.`kontak`'
+			
+		);
+
+		$sql .= " ORDER BY ".$columns_order_by[$column_order]." ".$column_dir.", nomor ";
+		$sql .= " LIMIT ".$limit_start." ,".$limit_length." ";
+
+		$data['query'] = $this->db->query($sql);
+		return $data;
+		
+		
+	}
+
+	public function json_profesi($like_value = NULL, $column_order = NULL, $column_dir = NULL, $limit_start = NULL, $limit_length = NULL)
+	{
+		$sql = "
+		SELECT
+		(@row:=@row+1) AS nomor,`nama`
+		
+		FROM
+		`profesi` AS a
+		
+		, (SELECT @row := 0) r 
+		WHERE 1=1
+		";
+
+		$data['totalData'] = $this->db->query($sql)->num_rows();
+
+		if( ! empty($like_value))
+		{
+			$sql .= " AND ( ";
+			$sql .= "
+			a.`nama` LIKE '%".$this->db->escape_like_str($like_value)."%'
+			";
+			$sql .= " ) ";
+		}
+
+		$data['totalFiltered']	= $this->db->query($sql)->num_rows();
+
+		$columns_order_by = array(
+			0   => 'nomor',
+			1   => 'a.`nama`'
+			
+		);
+
+		$sql .= " ORDER BY ".$columns_order_by[$column_order]." ".$column_dir.", nomor ";
+		$sql .= " LIMIT ".$limit_start." ,".$limit_length." ";
+
+		$data['query'] = $this->db->query($sql);
+		return $data;
+		
+		
+	}
+
+	public function json_testimoni($like_value = NULL, $column_order = NULL, $column_dir = NULL, $limit_start = NULL, $limit_length = NULL)
+	{
+		$sql = "
+		SELECT
+		(@row:=@row+1) AS nomor,`nama`,`komentar`
+		
+		FROM
+		`testimoni` AS a
+		
+		, (SELECT @row := 0) r 
+		WHERE 1=1
+		";
+
+		$data['totalData'] = $this->db->query($sql)->num_rows();
+
+		if( ! empty($like_value))
+		{
+			$sql .= " AND ( ";
+			$sql .= "
+			a.`nama` LIKE '%".$this->db->escape_like_str($like_value)."%'
+			";
+			$sql .= " ) ";
+		}
+
+		$data['totalFiltered']	= $this->db->query($sql)->num_rows();
+
+		$columns_order_by = array(
+			0   => 'nomor',
+			1   => 'a.`nama`'
 			
 		);
 

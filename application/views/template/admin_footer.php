@@ -3,7 +3,7 @@
 
 <footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-blue gradient-shadow navbar-border navbar-shadow">
   <div class="footer-copyright">
-    <div class="container"><span>&copy; <?php echo date('Y') ?>          <a href="http://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" target="_blank">SIWIKODE</a></div>
+    <div class="container"><span>&copy; <?php echo date('Y') ?> SIWIKODE</div>
     </div>
   </footer>
 

@@ -35,10 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="wrapper">
 							<h3><a href="<?php echo base_url('page/wisata/').$get_data_wisata['id'] ?>"><?php echo $get_data_wisata['nama']; ?></a></h3>
 						</div>
-						<ul>
-							<li><i class="icon_clock_alt"></i> 1h 30min</li>
-							<li><div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></li>
-						</ul>
+						
 					</div>
 				</div>
 			<?php } ?>
@@ -55,8 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<section class="add_bottom_45">
 				<div class="main_title_3">
 					<span><em></em></span>
-					<h2>Popular Restaurants</h2>
-					<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+					<h2>Popular Kuliner </h2>
 				</div>
 				<div class="row">
 					<?php foreach ($get_data_kuliner as $get_data_kuliner) { ?>
@@ -75,22 +71,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<?php } ?>
 				</div>
 				<!-- /row -->
-				<a href="restaurants-grid-isotope.html"><strong>View all (157) <i class="arrow_carrot-right"></i></strong></a>
+			
 			</section>
 			<!-- /section -->
 
-			<div class="banner mb-0">
-				<div class="wrapper d-flex align-items-center opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.3)">
-					<div>
-						<small>Adventure</small>
-						<h3>Your Perfect<br>Advenure Experience</h3>
-						<p>Activities and accommodations</p>
-						<a href="adventure.html" class="btn_1">Read more</a>
-					</div>
-				</div>
-				<!-- /wrapper -->
-			</div>
-			<!-- /banner -->
 
 		</div>
 		<!-- /container -->
@@ -102,11 +86,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="col-lg-5 col-md-6 float-right wow" data-wow-offset="250">
 					<div class="block-reveal">
 						<div class="block-vertical"></div>
-						<div class="box_1">
-							<h3>Enjoy a GREAT travel with us</h3>
-							<p>Ius cu tamquam persequeris, eu veniam apeirian platonem qui, id aliquip voluptatibus pri. Ei mea primis ornatus disputationi. Menandri erroribus cu per, duo solet congue ut. </p>
-							<a href="#0" class="btn_1 rounded">Read more</a>
-						</div>
+						
 					</div>
 				</div>
 			</div>
