@@ -23,31 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</section>
 		<!--/hero_in-->
-		
-		<div class="filters_listing sticky_horizontal" style="">
-			<div class="container">
-				<ul class="clearfix">
-					<li>
-						<div class="switch-field">
-							<input type="radio" id="all" name="listing_filter" value="all" checked="">
-							<label for="all">All</label>
-							<input type="radio" id="popular" name="listing_filter" value="popular">
-							<label for="popular">Popular</label>
-							<input type="radio" id="latest" name="listing_filter" value="latest">
-							<label for="latest">Latest</label>
-						</div>
-					</li>
-					<li>
-						<div class="layout_view">
-							<a href="restaurants-grid-isotope.html"><i class="icon-th"></i></a>
-							<a href="#0" class="active"><i class="icon-th-list"></i></a>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<!-- /container -->
-		</div>
-		<!-- /filters -->
+	
 		
 
 		<div class="container margin_60_35">

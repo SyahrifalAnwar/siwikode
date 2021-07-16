@@ -38,7 +38,6 @@
                         <th class="sorting" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" style="width: 391px;" aria-label="Position: activate to sort column ascending">Profesi </th>
                         <th></th>
                         <th></th>
-                        <th></th>
                        
                        </tr>
                     </thead>

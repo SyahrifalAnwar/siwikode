@@ -38,9 +38,100 @@ class M_data extends CI_Model {
 		return $query->result_array();
 	}
 
+	public function get_profesi($id)
+	{
+		$sql = "SELECT * FROM `profesi` WHERE id = $id";
+		$query = $this->db->query($sql);
+		return $query->result_array();
+	}
+
 	public function simpan_wisata($data)
 	{
 		return $this->db->insert('wisata', $data);
+	}
+
+	public function simpan_profesi($data='')
+	{
+		return $this->db->insert('profesi', $data);
+	}
+
+	public function simpan_editjenis_wisata($data='')
+	{
+		$this->db->set($data);
+		$this->db->where('id', $data['id']);
+		return $this->db->update('jenis_wisata');
+
+	}
+
+	public function simpan_editjenis_kuliner($data='')
+	{
+		$this->db->set($data);
+		$this->db->where('id', $data['id']);
+		return $this->db->update('jenis_kuliner');
+
+	}
+
+	public function simpan_editprofesi($data='')
+	{
+		$this->db->set($data);
+		$this->db->where('id', $data['id']);
+		return $this->db->update('profesi');
+	}
+
+	public function get_jeniswisata($id='')
+	{
+		$sql = "SELECT * FROM `jenis_wisata` WHERE id = $id";
+		$query = $this->db->query($sql);
+		return $query->result_array();
+	}
+
+	public function delete_jenis_wisata($id='')
+	{
+		$sql = "DELETE FROM `jenis_wisata` WHERE id = $id";
+		$query = $this->db->query($sql);
+		return $query;
+	}
+
+	public function delete_testimoni($id='')
+	{
+		$sql = "DELETE FROM `testimoni` WHERE id = $id";
+		$query = $this->db->query($sql);
+		return $query;
+	}
+
+	public function delete_wisata($id='')
+	{
+		$sql = "DELETE FROM `wisata` WHERE id = $id";
+		$query = $this->db->query($sql);
+		return $query;
+	}
+
+	public function delete_testimoni($id='')
+	{
+		$sql = "DELETE FROM `testimoni` WHERE id = $id";
+		$query = $this->db->query($sql);
+		return $query;
+	}
+
+	public function delete_profesi($id='')
+	{
+		$sql = "DELETE FROM `profesi` WHERE id = $id";
+		$query = $this->db->query($sql);
+		return $query;
+	}
+
+	public function delete_jenis_kuliner($id='')
+	{
+		$sql = "DELETE FROM `jenis_kuliner` WHERE id = $id";
+		$query = $this->db->query($sql);
+		return $query;
+	}
+
+	public function get_jeniskuliner($id='')
+	{
+		$sql = "SELECT * FROM `jenis_kuliner` WHERE id = $id";
+		$query = $this->db->query($sql);
+		return $query->result_array();
 	}
 
 	public function simpan_jenis_wisata($data)
@@ -253,7 +344,7 @@ class M_data extends CI_Model {
 	{
 		$sql = "
 		SELECT
-		(@row:=@row+1) AS nomor,`nama`
+		(@row:=@row+1) AS nomor,`id`,`nama`
 		
 		FROM
 		`profesi` AS a
@@ -294,7 +385,7 @@ class M_data extends CI_Model {
 	{
 		$sql = "
 		SELECT
-		(@row:=@row+1) AS nomor,`nama`,`komentar`
+		(@row:=@row+1) AS nomor,`id`,`nama`,`komentar`,`rating`
 		
 		FROM
 		`testimoni` AS a

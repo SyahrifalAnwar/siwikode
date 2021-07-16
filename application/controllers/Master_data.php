@@ -22,7 +22,7 @@ class Master_data extends CI_Controller {
 			$nestedData[]	= $row['kontak'];
 			$nestedData[]	= "<a id='detail' href='".base_url('master_data/detail_wisata/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1'><i class='material-icons'>settings_backup_restore</i></a>";
 			$nestedData[]	= "<a id='edit' href='".base_url('master_data/edit_wisata/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1 green darken-1'><i class='material-icons'>edit</i></a>";
-			$nestedData[]	= "<a href='".base_url('master_data/hapus_wisata/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1 red darken-1'><i class='material-icons'>delete</i></i></a>";
+			$nestedData[]	= "<a href='".base_url('master_data/delete_wisata/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1 red darken-1'><i class='material-icons'>delete</i></i></a>";
 
 
 			$data[] = $nestedData;
@@ -57,7 +57,7 @@ class Master_data extends CI_Controller {
 			$nestedData[]	= $row['kontak'];
 			$nestedData[]	= "<a id='detail' href='".base_url('master_data/detail_kuliner/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1'><i class='material-icons'>settings_backup_restore</i></a>";
 			$nestedData[]	= "<a id='edit' href='".base_url('master_data/edit_kuliner/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1 green darken-1'><i class='material-icons'>edit</i></a>";
-			$nestedData[]	= "<a href='".base_url('master_data/hapus_kuliner/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1 red darken-1'><i class='material-icons'>delete</i></i></a>";
+			$nestedData[]	= "<a href='".base_url('master_data/delete_wisata/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1 red darken-1'><i class='material-icons'>delete</i></i></a>";
 
 			$data[] = $nestedData;
 		}
@@ -87,9 +87,8 @@ class Master_data extends CI_Controller {
 			$nestedData = array();
 			$nestedData[]	= $row['nomor'];
 			$nestedData[]	= $row['nama'];
-			$nestedData[]	= "<a class='waves-effect waves-light btn-small mb-1 mr-1'><i class='material-icons'>settings_backup_restore</i></a>";
-			$nestedData[]	= "<a class='waves-effect waves-light btn-small mb-1 mr-1 green darken-1'><i class='material-icons'>edit</i></a>";
-			$nestedData[]	= "<a class='waves-effect waves-light btn-small mb-1 mr-1 red darken-1'><i class='material-icons'>delete</i></i></a>";
+			$nestedData[]	= "<a id='edit' href='".base_url('master_data/edit_profesi/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1 green darken-1'><i class='material-icons'>edit</i></a>";
+			$nestedData[]	= "<a href='".base_url('master_data/delete_profesi/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1 red darken-1'><i class='material-icons'>delete</i></i></a>";
 
 			$data[] = $nestedData;
 		}
@@ -120,7 +119,7 @@ class Master_data extends CI_Controller {
 			$nestedData[]	= $row['nomor'];
 			$nestedData[]	= $row['nama'];
 			$nestedData[]	= "<a id='edit' href='".base_url('master_data/edit_jenis_wisata/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1 green darken-1'><i class='material-icons'>edit</i></a>";
-			$nestedData[]	= "<a class='waves-effect waves-light btn-small mb-1 mr-1 red darken-1'><i class='material-icons'>delete</i></i></a>";
+			$nestedData[]	= "<a href='".base_url('master_data/delete_jenis_wisata/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1 red darken-1'><i class='material-icons'>delete</i></i></a>";
 
 			$data[] = $nestedData;
 		}
@@ -151,7 +150,7 @@ class Master_data extends CI_Controller {
 			$nestedData[]	= $row['nomor'];
 			$nestedData[]	= $row['nama'];
 			$nestedData[]	= "<a id='edit' href='".base_url('master_data/edit_jenis_kuliner/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1 green darken-1'><i class='material-icons'>edit</i></a>";
-			$nestedData[]	= "<a class='waves-effect waves-light btn-small mb-1 mr-1 red darken-1'><i class='material-icons'>delete</i></i></a>";
+			$nestedData[]	= "<a href='".base_url('master_data/delete_jenis_kuliner/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1 red darken-1'><i class='material-icons'>delete</i></i></a>";
 
 			$data[] = $nestedData;
 		}
@@ -180,10 +179,10 @@ class Master_data extends CI_Controller {
 		{
 			$nestedData = array();
 			$nestedData[]	= $row['nomor'];
+			$nestedData[]	= $row['nama'];
 			$nestedData[]	= $row['komentar'];
-			$nestedData[]	= "<a class='waves-effect waves-light btn-small mb-1 mr-1'><i class='material-icons'>settings_backup_restore</i></a>";
-			$nestedData[]	= "<a id='edit' class='waves-effect waves-light btn-small mb-1 mr-1 green darken-1'><i class='material-icons'>edit</i></a>";
-			$nestedData[]	= "<a class='waves-effect waves-light btn-small mb-1 mr-1 red darken-1'><i class='material-icons'>delete</i></i></a>";
+			$nestedData[]	= $row['rating'];
+			$nestedData[]	= "<a href='".base_url('master_data/delete_testimoni/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1 red darken-1'><i class='material-icons'>delete</i></i></a>";
 
 			$data[] = $nestedData;
 		}
@@ -220,6 +219,22 @@ class Master_data extends CI_Controller {
 	{
 		$this->load->view('tambah_profesi');
 	}
+
+	function edit_jenis_wisata($id='')
+	{
+		$data['data'] = $this->M_data->get_jeniswisata($id);
+		$this->load->view('edit_jenis_wisata', $data);
+	}
+	function edit_jenis_kuliner($id='')
+	{
+		$data['data'] = $this->M_data->get_jeniskuliner($id);
+		$this->load->view('edit_jenis_kuliner', $data);
+	}
+	public function edit_profesi($id='')
+	{
+		$data['data'] = $this->M_data->get_profesi($id);
+		$this->load->view('edit_profesi', $data);
+	}
 	public function tambah_jenis_rekreasi()
 	{
 		$this->load->view('tambah_jenis_wisata');
@@ -247,6 +262,42 @@ class Master_data extends CI_Controller {
 			'menu_kuliner' => $this->M_data->menu_kuliner()
 		);
 		$this->load->view('edit_wisata', $data);
+	}
+
+	public function delete_wisata($id='')
+	{
+		$this->M_data->delete_wisata($id);
+		redirect('admin/data_wisata');
+	}
+
+	public function delete_testimoni($id='')
+	{
+		$this->M_data->delete_testimoni($id);
+		redirect('admin/data_testimoni');
+	}
+
+	public function delete_kuliner($id='')
+	{
+		$this->M_data->delete_wisata($id);
+		redirect('admin/data_kuliner');
+	}
+
+	public function delete_jenis_wisata($id='')
+	{
+		$this->M_data->delete_jenis_wisata($id);
+		redirect('admin/jenis_rekreasi');
+	}
+
+	public function delete_jenis_kuliner($id='')
+	{
+		$this->M_data->delete_jenis_kuliner($id);
+		redirect('admin/jenis_kuliner');
+	}
+
+	public function delete_profesi($id='')
+	{
+		$this->M_data->delete_profesi($id);
+		redirect('admin/data_profesi');
 	}
 
 	public function simpan_wisata($value='')
@@ -293,6 +344,18 @@ class Master_data extends CI_Controller {
 		redirect('admin/data_wisata');
 	}
 
+	public function simpan_profesi($value='')
+	{
+		$data = array(
+			'nama' => $this->input->post('nama') , );
+		$simpan = $this->M_data->simpan_profesi($data);
+		if ($simpan) {
+			redirect('admin/data_profesi');
+		}
+	}
+
+
+
 	public function simpan_jenis_wisata($value='')
 	{
 		$data = array(
@@ -300,6 +363,39 @@ class Master_data extends CI_Controller {
 		$simpan = $this->M_data->simpan_jenis_wisata($data);
 		if ($simpan) {
 			redirect('admin/jenis_rekreasi');
+		}
+	}
+
+	public function simpan_editjenis_wisata($id='')
+	{
+		$data = array(
+			'id' => $id ,
+			'nama' => $this->input->post('nama') , );
+		$simpan = $this->M_data->simpan_editjenis_wisata($data);
+		if ($simpan) {
+			redirect('admin/jenis_rekreasi');
+		}
+	}
+
+	public function simpan_editprofesi($id='')
+	{
+		$data = array(
+			'id' => $id ,
+			'nama' => $this->input->post('nama') , );
+		$simpan = $this->M_data->simpan_editprofesi($data);
+		if ($simpan) {
+			redirect('admin/data_profesi');
+		}
+	}
+
+	public function simpan_editjenis_kuliner($id='')
+	{
+		$data = array(
+			'id' => $id ,
+			'nama' => $this->input->post('nama') , );
+		$simpan = $this->M_data->simpan_editjenis_kuliner($data);
+		if ($simpan) {
+			redirect('admin/jenis_kuliner');
 		}
 	}
 
