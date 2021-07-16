@@ -37,7 +37,6 @@
                       <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" style="width: 260px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">NO</th>
                         <th class="sorting" tabindex="0" aria-controls="data-table-simple" rowspan="1" colspan="1" style="width: 391px;" aria-label="Position: activate to sort column ascending">Nama Rekreasi </th>
                       
-                        <th></th>
                          <th></th>
                           <th></th>
                        

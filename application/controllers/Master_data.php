@@ -119,8 +119,7 @@ class Master_data extends CI_Controller {
 			$nestedData = array();
 			$nestedData[]	= $row['nomor'];
 			$nestedData[]	= $row['nama'];
-			$nestedData[]	= "<a class='waves-effect waves-light btn-small mb-1 mr-1'><i class='material-icons'>settings_backup_restore</i></a>";
-			$nestedData[]	= "<a class='waves-effect waves-light btn-small mb-1 mr-1 green darken-1'><i class='material-icons'>edit</i></a>";
+			$nestedData[]	= "<a id='edit' href='".base_url('master_data/edit_jenis_wisata/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1 green darken-1'><i class='material-icons'>edit</i></a>";
 			$nestedData[]	= "<a class='waves-effect waves-light btn-small mb-1 mr-1 red darken-1'><i class='material-icons'>delete</i></i></a>";
 
 			$data[] = $nestedData;
@@ -151,8 +150,7 @@ class Master_data extends CI_Controller {
 			$nestedData = array();
 			$nestedData[]	= $row['nomor'];
 			$nestedData[]	= $row['nama'];
-			$nestedData[]	= "<a class='waves-effect waves-light btn-small mb-1 mr-1'><i class='material-icons'>settings_backup_restore</i></a>";
-			$nestedData[]	= "<a class='waves-effect waves-light btn-small mb-1 mr-1 green darken-1'><i class='material-icons'>edit</i></a>";
+			$nestedData[]	= "<a id='edit' href='".base_url('master_data/edit_jenis_kuliner/').$row['id']."' class='waves-effect waves-light btn-small mb-1 mr-1 green darken-1'><i class='material-icons'>edit</i></a>";
 			$nestedData[]	= "<a class='waves-effect waves-light btn-small mb-1 mr-1 red darken-1'><i class='material-icons'>delete</i></i></a>";
 
 			$data[] = $nestedData;
@@ -184,7 +182,7 @@ class Master_data extends CI_Controller {
 			$nestedData[]	= $row['nomor'];
 			$nestedData[]	= $row['komentar'];
 			$nestedData[]	= "<a class='waves-effect waves-light btn-small mb-1 mr-1'><i class='material-icons'>settings_backup_restore</i></a>";
-			$nestedData[]	= "<a class='waves-effect waves-light btn-small mb-1 mr-1 green darken-1'><i class='material-icons'>edit</i></a>";
+			$nestedData[]	= "<a id='edit' class='waves-effect waves-light btn-small mb-1 mr-1 green darken-1'><i class='material-icons'>edit</i></a>";
 			$nestedData[]	= "<a class='waves-effect waves-light btn-small mb-1 mr-1 red darken-1'><i class='material-icons'>delete</i></i></a>";
 
 			$data[] = $nestedData;
@@ -216,6 +214,19 @@ class Master_data extends CI_Controller {
 			'menu_kuliner' => $this->M_data->menu_kuliner()
 		);
 		$this->load->view('tambah_kuliner',$data);
+	}
+
+	public function tambah_profesi()
+	{
+		$this->load->view('tambah_profesi');
+	}
+	public function tambah_jenis_rekreasi()
+	{
+		$this->load->view('tambah_jenis_wisata');
+	}
+	public function tambah_jenis_kuliner()
+	{
+		$this->load->view('tambah_jenis_kuliner');
 	}
 
 	public function edit_wisata($id='')
@@ -280,6 +291,26 @@ class Master_data extends CI_Controller {
 			'tipe' => 'kuliner' );
 		$save = $this->M_data->simpan_wisata($data);
 		redirect('admin/data_wisata');
+	}
+
+	public function simpan_jenis_wisata($value='')
+	{
+		$data = array(
+			'nama' => $this->input->post('nama') , );
+		$simpan = $this->M_data->simpan_jenis_wisata($data);
+		if ($simpan) {
+			redirect('admin/jenis_rekreasi');
+		}
+	}
+
+	public function simpan_jenis_kuliner($value='')
+	{
+		$data = array(
+			'nama' => $this->input->post('nama') , );
+		$simpan = $this->M_data->simpan_jenis_kuliner($data);
+		if ($simpan) {
+			redirect('admin/jenis_kuliner');
+		}
 	}
 
 }

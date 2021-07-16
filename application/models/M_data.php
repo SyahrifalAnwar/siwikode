@@ -43,6 +43,16 @@ class M_data extends CI_Model {
 		return $this->db->insert('wisata', $data);
 	}
 
+	public function simpan_jenis_wisata($data)
+	{
+		return $this->db->insert('jenis_wisata', $data);
+	}
+
+	public function simpan_jenis_kuliner($data)
+	{
+		return $this->db->insert('jenis_kuliner', $data);
+	}
+
 	public function get_data_kuliner($id = '')
 	{
 		if ($id == '') {
